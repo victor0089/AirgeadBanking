@@ -1,0 +1,83 @@
+CS 210 PROJECT TWO - AIRGEAD BANKING
+PSEUDOCODE / STEP-BY-STEP PROGRAM PLAN
+
+MAIN PROGRAM
+01. Start the program.
+02. Create a BankingApp object.
+03. Call the BankingApp run method.
+04. Catch any unexpected program error.
+05. Display a readable error message if an error occurs.
+06. Exit the program.
+
+BANKING APP - RUN METHOD
+01. Set runAgain to true.
+02. Repeat while runAgain is true.
+03. Display the Airgead Banking Data Input heading.
+04. Ask the user for initialInvestment.
+05. Repeat the request until initialInvestment is a valid number above zero.
+06. Ask the user for monthlyDeposit.
+07. Repeat the request until monthlyDeposit is a valid nonnegative number.
+08. Ask the user for annualInterestRate.
+09. Repeat the request until annualInterestRate is a valid nonnegative number.
+10. Ask the user for numberOfYears.
+11. Repeat the request until numberOfYears is a whole number from 1 to 100.
+12. Create an InvestmentCalculator with the four values.
+13. Ask the user to press Enter to continue.
+14. Call calculateYearlyReport without additional monthly deposits.
+15. Display the no-deposit Year End Balance and Year End Earned Interest report.
+16. Call calculateYearlyReport with the user's monthly deposit.
+17. Display the with-deposit Year End Balance and Year End Earned Interest report.
+18. Ask whether the user wants to enter another investment scenario.
+19. Repeat the response request until the user answers Y or N.
+20. Set runAgain to true for Y or false for N.
+21. Return to the start of the loop if runAgain is true.
+22. Display a farewell message when runAgain is false.
+23. End the run method.
+
+READ AND VALIDATE USER INPUT
+01. Display the prompt for the required field.
+02. Read the entire input line as text.
+03. Stop with a readable error if the input stream has closed.
+04. Try to convert the text into a number.
+05. Reject empty text, letters, extra characters, and non-finite values.
+06. Reject values below the required minimum.
+07. Reject decimal years and years outside the allowed range.
+08. Display a helpful correction message when validation fails.
+09. Ask for the same field again when validation fails.
+10. Return the validated number when validation succeeds.
+
+INVESTMENT CALCULATOR - CALCULATE YEARLY REPORT
+01. Create an empty list of YearlySummary results.
+02. Set openingBalance to initialInvestment.
+03. Set depositedAmount to monthlyDeposit when deposits are enabled.
+04. Set depositedAmount to zero when deposits are disabled.
+05. Divide annualInterestRate by 100 to convert it to decimal form.
+06. Divide the decimal annual rate by 12 to find monthlyInterestRate.
+07. Repeat for each year from 1 through numberOfYears.
+08. Set yearEndInterest to zero at the start of the year.
+09. Repeat for each of the year's 12 months.
+10. Add depositedAmount to openingBalance to get total.
+11. Multiply total by monthlyInterestRate to get monthlyInterest.
+12. Add monthlyInterest to total to get closingBalance.
+13. Stop with a readable error if a calculation overflows.
+14. Add monthlyInterest to yearEndInterest.
+15. Set openingBalance to closingBalance for the next month.
+16. Finish the 12-month loop.
+17. Save year, openingBalance, and yearEndInterest in a YearlySummary.
+18. Add the YearlySummary to the report list.
+19. Finish the year loop.
+20. Return the completed report list.
+
+DISPLAY YEARLY REPORT
+01. Display the heading for the requested investment scenario.
+02. Display columns for Year, Year End Balance, and Year End Earned Interest.
+03. Repeat for every YearlySummary in the report list.
+04. Round the displayed year-end balance to two decimal places.
+05. Round the displayed annual earned interest to two decimal places.
+06. Display the year and the formatted currency values in aligned columns.
+07. Finish the report loop.
+
+DESIGN NOTE
+Keep complete precision while calculating monthly compound interest.
+Round money to two decimal places only when displaying the reports.
+This reproduces Airgead Banking's provided five-year example.

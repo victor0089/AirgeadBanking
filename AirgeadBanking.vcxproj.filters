@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <ItemGroup>
+    <Filter Include="Source Files"><UniqueIdentifier>{8BC07CC3-AB3D-4CF0-97EE-D067E5B022DE}</UniqueIdentifier><Extensions>cpp;c;cc</Extensions></Filter>
+    <Filter Include="Header Files"><UniqueIdentifier>{094358C4-1206-40FA-98F1-4D0DB80067AE}</UniqueIdentifier><Extensions>h;hpp</Extensions></Filter>
+  </ItemGroup>
+  <ItemGroup>
+    <ClCompile Include="Main.cpp"><Filter>Source Files</Filter></ClCompile>
+    <ClCompile Include="BankingApp.cpp"><Filter>Source Files</Filter></ClCompile>
+    <ClCompile Include="InvestmentCalculator.cpp"><Filter>Source Files</Filter></ClCompile>
+  </ItemGroup>
+  <ItemGroup>
+    <ClInclude Include="BankingApp.h"><Filter>Header Files</Filter></ClInclude>
+    <ClInclude Include="InvestmentCalculator.h"><Filter>Header Files</Filter></ClInclude>
+  </ItemGroup>
+</Project>
