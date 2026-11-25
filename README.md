@@ -2,7 +2,7 @@
 
 An object-oriented, interactive C++ console application that demonstrates monthly compound interest. The application presents **both required year-end reports**: with and without added monthly deposits.
 
-## Visual Studio 2015: open and run  
+## Visual Studio : open and run  
 
 1. Extract all files from `AirgeadBanking\_ProjectTwo.zip` into a folder.
 2. Open `AirgeadBanking.sln` in **Visual Studio 2015**.
